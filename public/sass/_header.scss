@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+
+  &-wrp {
+    height: 127px;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    align-items: center;
+  }
+
+  .nav {
+    &-menu {
+      display: flex;
+      gap: 2rem;
+
+      &-item {
+        transition: 0.3s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &-link {
+        color: $color-white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: $sm;
+        transition: 0.3s all ease;
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        &.active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  //   nav end
+  .brand {
+    width: 120px;
+    height: 91px;
+  }
+}

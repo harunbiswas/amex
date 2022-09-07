@@ -12,10 +12,70 @@
       href="./public/css/slick-theme.css"
     />
 
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Vite App</title>
   </head>
   <body>
-    <!-- // slider  -->
+    <!-- header start  -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-wrp">
+          <nav class="nav">
+            <ul class="nav-menu">
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link active">Home</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link">catering</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link">About us</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link">locations</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link">menu</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="brand">
+            <a href="index.html" class="brand-img">
+              <img
+                src="https://www.atmex.com.au/wp-content/uploads/2021/03/logo-with-whitge-bg-120x91.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <ul class="social">
+            <li class="social-item">
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- // slider start -->
     <section class="slider">
       <div class="fade">
         <div class="slider-slide">
@@ -40,6 +100,8 @@
         <a href="contact" class="btn btn-white">Contact us</a>
       </div>
     </section>
+    <!-- slider end  -->
+
     <!-- jquery  -->
     <script
       type="text/javascript"
@@ -49,7 +111,15 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <!-- slick slider  -->
     <script type="text/javascript" src="./public/js/slick.js"></script>
+    <!-- font awesome   -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

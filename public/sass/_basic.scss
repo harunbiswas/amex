@@ -61,3 +61,59 @@ h5 {
     color: $color-white;
   }
 }
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: $md;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.container-fluid {
+  padding: 0 3rem;
+
+  @media screen and (max-width: 576px) {
+    padding: 0 1rem;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+
+  &-link {
+    background-color: $color-white;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
