@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "website": "https://www.atmex.com.au/",
   "scripts": {
     "start": "node-sass ./public/sass/main.scss ./style.css -w",
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview"
   },

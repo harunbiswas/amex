@@ -11,14 +11,20 @@ html {
 html,
 body {
   font-family: $font-poppins;
+  background-color: #f4f4f4 !important;
+  scroll-behavior: smooth;
 }
 
 img {
   width: 100% !important;
   height: 100% !important;
+  object-fit: cover;
 }
 
-p {
+p,
+span,
+strong,
+button {
   font-size: $md;
 }
 
@@ -48,6 +54,44 @@ h5 {
   padding: 1.5rem 3rem;
   font-size: 20px;
   transition: 0.4s;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 150%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: 3px solid $color-white;
+    border-width: 3px 3px 0 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.4s;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 150%;
+    transition: 0.4s;
+  }
+
+  &:hover {
+    &::after {
+      left: 50%;
+    }
+    &::before {
+      left: 0;
+    }
+  }
 }
 
 .btn-white {
@@ -55,6 +99,7 @@ h5 {
   padding: 1rem 2rem;
   color: $color-theme;
   font-size: $xl;
+  text-transform: none;
 
   &:hover {
     background-color: $colro-black;
@@ -115,5 +160,50 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $color-theme;
+  }
+}
+
+.title,
+.title-red,
+.title-big {
+  font-family: $font-tequila;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: $color-title;
+  letter-spacing: 2px;
+}
+
+.title-red {
+  color: $color-primary;
+  font-size: $md;
+}
+
+.title-big {
+  font-size: $xl-4;
+}
+
+.text {
+  line-height: 1.85714285714286;
+}
+
+.scroll-top {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: $xl-2;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  z-index: 9999999;
+
+  &.active {
+    display: flex;
   }
 }

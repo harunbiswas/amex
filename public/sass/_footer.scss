@@ -1,0 +1,69 @@
+.footer {
+  color: $color-white;
+  background-image: url(https://www.atmex.com.au/wp-content/uploads/2021/02/slider-footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-top {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    padding: 10rem 0;
+    grid-gap: 5rem;
+
+    h2,
+    a {
+      color: $color-white;
+    }
+  }
+
+  &-item {
+    &-table {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px dotted $color-white;
+
+        strong {
+          font-weight: 500;
+        }
+        span {
+          letter-spacing: 2px;
+        }
+      }
+    }
+    // table end
+    &-contact {
+      li {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        border-bottom: 1px dotted $color-white;
+        align-items: center;
+
+        span {
+          font-size: $xl-2;
+        }
+      }
+    }
+  }
+  // top end
+  &-bottom {
+    background-color: #1d1d1d;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 8rem;
+      color: $color-white;
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}

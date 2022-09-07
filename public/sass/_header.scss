@@ -4,12 +4,22 @@
   left: 0;
   width: 100%;
   z-index: 99999;
+  transition: 0.4s;
 
   &-wrp {
     height: 127px;
     display: grid;
     grid-template-columns: 45% 10% 45%;
     align-items: center;
+    transition: 0.4s;
+  }
+
+  &.scroll {
+    background-color: $color-theme;
+
+    .header-wrp {
+      height: 7.3rem !important;
+    }
   }
 
   .nav {
@@ -44,7 +54,7 @@
 
   //   nav end
   .brand {
-    width: 120px;
-    height: 91px;
+    max-width: 120px;
+    max-height: 91px;
   }
 }
