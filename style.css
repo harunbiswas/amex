@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@keyframes increment {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -10,3 +18,91 @@ html {
 html,
 body {
   font-family: "Poppins", sans-serif; }
+
+img {
+  width: 100% !important;
+  height: 100% !important; }
+
+p {
+  font-size: 16px; }
+
+h1 {
+  font-size: 34px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 18px; }
+
+.btn {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #ec1c24;
+  padding: 1.5rem 3rem;
+  font-size: 20px;
+  transition: 0.4s; }
+
+.btn-white {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  color: #125935;
+  font-size: 18px; }
+  .btn-white:hover {
+    background-color: #000;
+    color: #fff; }
+
+.slider {
+  height: 100vh;
+  background-color: #125935;
+  position: relative; }
+  .slider img {
+    height: 100vh !important;
+    object-fit: cover;
+    animation-name: increment;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; }
+  .slider .slick-dots {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+    gap: 1rem;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+  .slider .slick-dots li button {
+    z-index: 999;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem; }
+  .slider .slick-active button {
+    background: #fff; }
+  .slider-content {
+    max-width: 569px;
+    height: auto;
+    background-color: rgba(18, 89, 53, 0.8);
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 4rem 8rem; }
+    .slider-content-title {
+      font-size: 4rem; }
+    .slider-content-text {
+      margin: 0.5rem 0;
+      font-size: 18px; }
