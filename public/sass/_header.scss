@@ -6,6 +6,23 @@
   z-index: 99999;
   transition: 0.4s;
 
+  &.header-white {
+    background-color: $color-white;
+    position: unset;
+    border-bottom: 1px solid rgb(241, 241, 241);
+
+    .nav-menu-link {
+      color: $color-black;
+    }
+
+    .social {
+      a {
+        background-color: $color-theme;
+        color: $color-white;
+      }
+    }
+  }
+
   &-wrp {
     height: 127px;
     display: grid;
@@ -15,10 +32,22 @@
   }
 
   &.scroll {
-    background-color: $color-theme;
+    background-color: $color-theme !important;
+    position: fixed !important;
+    border-bottom: none;
 
     .header-wrp {
       height: 7.3rem !important;
+    }
+    .social {
+      a {
+        background-color: $color-white;
+        color: $color-theme;
+      }
+    }
+
+    .nav-menu-link {
+      color: $color-white;
     }
   }
 

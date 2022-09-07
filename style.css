@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: "Tequila";
-  src: url("../fonts/La-Tequila.ttf"); }
+  src: url("./public/fonts/La-Tequila.ttf"); }
 
 @keyframes increment {
   0% {
@@ -191,6 +191,15 @@ a {
   width: 100%;
   z-index: 99999;
   transition: 0.4s; }
+  .header.header-white {
+    background-color: #fff;
+    position: unset;
+    border-bottom: 1px solid #f1f1f1; }
+    .header.header-white .nav-menu-link {
+      color: #000; }
+    .header.header-white .social a {
+      background-color: #125935;
+      color: #fff; }
   .header-wrp {
     height: 127px;
     display: grid;
@@ -198,9 +207,16 @@ a {
     align-items: center;
     transition: 0.4s; }
   .header.scroll {
-    background-color: #125935; }
+    background-color: #125935 !important;
+    position: fixed !important;
+    border-bottom: none; }
     .header.scroll .header-wrp {
       height: 7.3rem !important; }
+    .header.scroll .social a {
+      background-color: #fff;
+      color: #125935; }
+    .header.scroll .nav-menu-link {
+      color: #fff; }
   .header .nav-menu {
     display: flex;
     gap: 2rem; }
@@ -451,3 +467,43 @@ a {
     .bon-appentite .container img {
       max-width: 800px;
       max-height: 500px; }
+
+.about {
+  background-color: #fff; }
+  .about-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4rem; }
+  .about-img {
+    width: 100%; }
+  .about-content {
+    width: 100%; }
+
+.about-gellary {
+  display: grid;
+  grid-template-columns: auto auto auto; }
+  .about-gellary-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    text-align: center;
+    color: #fff; }
+    .about-gellary-item .title {
+      color: #fff; }
+    .about-gellary-item.bg-red {
+      background-color: #ec1c24; }
+    .about-gellary-item.bg-green {
+      background-color: #125935; }
+    .about-gellary-item.img {
+      padding: 0; }
+
+.menu {
+  text-align: center;
+  padding: 10rem 0; }
+  .menu .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }

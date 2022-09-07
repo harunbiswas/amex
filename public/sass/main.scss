@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Tequila";
-  src: url("../fonts/La-Tequila.ttf");
+  src: url("./public/fonts/La-Tequila.ttf");
 }
 
 @import "./animation";
@@ -19,3 +19,5 @@
 
 // pages
 @import "./home";
+@import "./about";
+@import "./menu";

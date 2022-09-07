@@ -1,0 +1,47 @@
+.about {
+  background-color: $color-white;
+
+  &-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4rem;
+  }
+
+  &-img {
+    width: 100%;
+  }
+  &-content {
+    width: 100%;
+  }
+}
+
+.about-gellary {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    text-align: center;
+    color: $color-white;
+
+    .title {
+      color: $color-white;
+    }
+
+    &.bg-red {
+      background-color: $color-primary;
+    }
+    &.bg-green {
+      background-color: $color-theme;
+    }
+
+    &.img {
+      padding: 0;
+    }
+  }
+}
