@@ -1,0 +1,16 @@
+{
+  "name": "projectr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node-sass ./public/sass/main.scss ./style.css -w",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "vite": "^3.1.0"
+  }
+}
