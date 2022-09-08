@@ -10,6 +10,18 @@ $(".fade").slick({
   arrows: false,
 });
 
+// estinsive slider
+$(".one-time").slick({
+  dots: true,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 2,
+  adaptiveHeight: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+});
+
 // scroll
 const header = document.querySelector(".header");
 const brandImg = document.querySelector(".brand img");

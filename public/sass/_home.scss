@@ -19,9 +19,38 @@
     order: 1;
   }
 
+  &-slider {
+    width: 100%;
+
+    .slick-dots {
+      left: 50%;
+      bottom: 2rem;
+      transform: translateX(-50%);
+      display: flex !important;
+      gap: 1rem;
+      width: auto;
+      height: auto;
+
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .slick-dots li button {
+      z-index: 999;
+      border: 2px solid $color-title;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .slick-active button {
+      background: $color-title;
+    }
+  }
+
   &-left {
     position: relative;
-    display: flex;
+    z-index: 1;
 
     &::after {
       content: "";
@@ -31,6 +60,7 @@
       position: absolute;
       left: -2rem;
       top: -2rem;
+      z-index: -1;
     }
 
     .img {
