@@ -34,4 +34,12 @@ scrollTop.addEventListener("click", () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
 
-console.log("test");
+// responsive
+
+const toggle = document.querySelector(".toggle");
+const nav = document.querySelector(".nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  toggle.classList.toggle("active");
+});

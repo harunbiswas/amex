@@ -6,9 +6,61 @@
   z-index: 99999;
   transition: 0.4s;
 
+  .toggle {
+    display: none;
+
+    @media screen and (max-width: $w-md) {
+      position: absolute;
+      top: 50%;
+      right: 3rem;
+      width: 2rem;
+      height: 2px;
+      background-color: $color-primary;
+      display: block;
+      transform: translateY(-50%);
+      border-radius: 1px;
+      cursor: pointer;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: 0;
+        width: 2rem;
+        height: 2px;
+        background-color: $color-primary;
+        display: block;
+        transform: translateY(-50%);
+        border-radius: 1px;
+        transition: 0.3s;
+      }
+
+      &::after {
+        top: 8px;
+      }
+
+      &.active {
+        visibility: hidden;
+
+        &::after {
+          visibility: visible;
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::before {
+          visibility: visible;
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+  }
+
   &.header-white {
     background-color: $color-white;
-    position: unset;
+    position: relative;
     border-bottom: 1px solid rgb(241, 241, 241);
 
     .nav-menu-link {
@@ -35,6 +87,11 @@
     background-color: $color-theme !important;
     position: fixed !important;
     border-bottom: none;
+    top: 0;
+
+    @media screen and (max-width: $w-md) {
+      position: relative !important;
+    }
 
     .header-wrp {
       height: 7.3rem !important;
@@ -51,15 +108,110 @@
     }
   }
 
+  @media screen and (max-width: $w-md) {
+    background-color: $color-white;
+    z-index: 999999999;
+
+    .social {
+      display: none;
+    }
+  }
+
   .nav {
+    @media screen and (max-width: $w-md) {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      background-color: #f5f5f5;
+      left: 0;
+      top: 100%;
+      transition: 0.4s;
+      margin-top: -100%;
+      z-index: -199;
+
+      &.active {
+        margin-top: 0;
+      }
+    }
+
     &-menu {
       display: flex;
       gap: 2rem;
 
+      @media screen and (max-width: $w-md) {
+        flex-direction: column;
+        padding: 1rem 3rem;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $color-white;
+        padding: 1rem;
+        border-top: 2px solid $color-primary;
+        z-index: -1;
+        width: 22rem;
+        margin-top: -100%;
+        transition: 0.3s visibility;
+        display: none;
+
+        @media screen and (max-width: $w-md) {
+          position: unset;
+          display: block !important;
+          background-color: transparent;
+          border-top: none;
+          width: 100%;
+          margin-top: 0;
+        }
+
+        &-item {
+          padding: 0.5rem 0;
+        }
+
+        &-link {
+          color: $color-black;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: $sm;
+          transition: 0.3s all ease;
+
+          span {
+            display: inline-block;
+            padding-left: 5px;
+          }
+
+          @media screen and (max-width: $w-md) {
+            color: $color-black !important;
+          }
+
+          &:hover {
+            color: $color-primary !important  ;
+          }
+
+          &.active {
+            color: $color-primary !important;
+          }
+        }
+      }
+
       &-item {
         transition: 0.3s all;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         &:hover {
           transform: scale(1.1);
+
+          @media screen and (max-width: $w-md) {
+            transform: scale(1);
+          }
+
+          .dropdown {
+            margin-top: 0;
+            display: block;
+          }
         }
       }
 
@@ -69,13 +221,24 @@
         font-weight: 600;
         font-size: $sm;
         transition: 0.3s all ease;
+        z-index: 99;
+        width: 100%;
+
+        span {
+          display: inline-block;
+          padding-left: 5px;
+        }
+
+        @media screen and (max-width: $w-md) {
+          color: $color-black !important;
+        }
 
         &:hover {
-          color: $color-primary;
+          color: $color-primary !important  ;
         }
 
         &.active {
-          color: $color-primary;
+          color: $color-primary !important;
         }
       }
     }

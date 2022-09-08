@@ -1,0 +1,24 @@
+.location {
+  text-align: center;
+  padding: 10rem 0;
+
+  .title-red {
+    font-size: $xl-2;
+  }
+
+  &-wrp {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-top: 5rem;
+    min-height: 50rem;
+    align-items: center;
+
+    @media screen and (max-width: $w-md) {
+      grid-template-columns: 100%;
+    }
+
+    .map {
+      height: 100%;
+    }
+  }
+}

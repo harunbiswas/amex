@@ -58,6 +58,7 @@ h5 {
   position: relative;
   overflow: hidden;
   transition: 0.3s;
+  border: none;
 
   &::after {
     content: "";
